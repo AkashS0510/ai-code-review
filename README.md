@@ -16,14 +16,14 @@ The AI Code Review System is an asynchronous GitHub Pull Request (PR) analysis a
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd potpie
+   git clone https://github.com/AkashS0510/ai-code-review
+   cd ai-code-review
    ```
 
 2. Set up a virtual environment:
    ```bash
-   python3 -m venv potpie/pyvenv
-   source potpie/bin/activate
+   python3 -m venv ai-code-review/pyvenv
+   source ai-code-review/bin/activate
    ```
 
 3. Install dependencies:
