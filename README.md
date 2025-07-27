@@ -63,6 +63,7 @@ The AI Code Review System is an asynchronous GitHub Pull Request (PR) analysis a
 
 ### Live API URL
 The live API is hosted at: `https://ai-code-review-e6zw.onrender.com`
+Swagger url: https://ai-code-review-e6zw.onrender.com/docs
 
 ### Endpoints
 
