@@ -174,9 +174,6 @@ The live API is hosted at: `https://ai-code-review-e6zw.onrender.com`
    - **Why**: A modular architecture makes the system easier to maintain, test, and extend.
    - **How**: The codebase is organized into distinct modules such as `services`, `workers`, and `models`, each responsible for a specific aspect of the system.
 
-9. **Logging and Monitoring**:
-   - **Why**: Effective logging and monitoring are essential for debugging and ensuring system reliability.
-   - **How**: Logging is implemented at various levels (info, warning, error) to capture key events and errors. Future plans include integrating monitoring tools like Prometheus and Grafana.
 
 ---
 
@@ -201,3 +198,25 @@ The live API is hosted at: `https://ai-code-review-e6zw.onrender.com`
    - Improve error handling and logging for better debugging and user feedback.
 
 ---
+
+## Running Tests
+
+To ensure the system is functioning as expected, you can run the test suite provided in the `tests/` directory. The tests are written using `pytest`.
+
+1. Set up a virtual environment:
+   ```bash
+   python3 -m venv ai-code-review/pyvenv
+   source ai-code-review/bin/activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r src/requirements.txt
+   ```
+
+3. Run the tests:
+   ```bash
+   pytest -v tests/
+   ```
+
+
