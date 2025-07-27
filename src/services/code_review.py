@@ -29,12 +29,31 @@ def ai_code_review(input_data: dict) -> dict:
 
     # Prepare the prompt with the input data
     prompt = f"""
-You are an expert Pull request Reviewer. Analyze the PR and code based on the following criteria:
+You are a goal-driven AI code review assistant that evaluates pull requests (PRs) with expert-level precision, using a structured multi-file, multi-metric analysis.
 
-- Code style and formatting issues
-- Potential bugs or errors  
-- Performance improvements
-- Best practices
+When provided with:
+
+    - A PR title
+
+    - A PR description
+
+    - A list of changed files with associated diffs
+
+Your objective is to analyze all files and return a comprehensive review based on the following evaluation criteria:
+
+Review Criteria (Apply to Each File)
+
+1. **Code Style and Formatting**
+   - Indentation, naming conventions, spacing, line length, redundant code, clarity
+2. **Bugs or Logical Errors (Critical)**
+   - Incorrect logic, misuse of data structures, off-by-one errors, unhandled nulls
+3. **Performance Optimization**
+   - Inefficient algorithms, repeated operations, memory usage, unnecessary computation
+4. **Security Flaws (Critical)**
+   - Injection, unsafe input handling, exposed credentials, insecure dependencies
+5. **Best Practices**
+   - SOLID principles, DRY, KISS, error handling, modularity, testability
+
 
 Make sure to analyze and look into all the files in the PR and include the review results of all files in the output.
 
@@ -60,6 +79,18 @@ Each issue should have:
 - suggestion: actionable suggestion to fix the issue
 
 Consider "bug" and "security" issues as critical.
+
+NOTES: 
+- Ensure all files and changes are reviewed.
+
+- Always include line numbers if available from the diff.
+
+- Always count and tag critical issues (bugs + security).
+
+- Do not miss formatting, naming, or logical inconsistencies.
+
+- If no issues are found, explicitly return empty issues for that file.
+
 """
 
     # Invoke the LLM with the prepared prompt

@@ -180,23 +180,13 @@ The live API is hosted at: `https://ai-code-review-e6zw.onrender.com`
 ## Future Improvements
 
 1. **Enhanced AI Review**:
-   - Incorporate additional AI models for specialized code analysis (e.g., security, performance).
+   - Currently, we are using only the difference of code lines to Analyze the PR, but to have detailed review we can use
+      whole file contents before and after change.
 
 2. **User Authentication**:
    - Add OAuth-based authentication for secure access to the API.
-
-3. **Web Interface**:
-   - Develop a frontend dashboard for easier task management and result visualization.
-
-4. **Multi-Language Support**:
-   - Extend support for analyzing code in multiple programming languages.
-
-5. **Real-Time Notifications**:
-   - Integrate real-time notifications for task status updates.
-
-6. **Error Handling**:
-   - Improve error handling and logging for better debugging and user feedback.
-
+3. **Seperate Celery and FastAPI services**
+   Currently the celery workers and fastapi service are run in a single container together, we can separate the services to have a better and stable architecture
 ---
 
 ## Running Tests
