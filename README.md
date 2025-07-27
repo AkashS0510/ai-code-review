@@ -187,7 +187,7 @@ Swagger url: https://ai-code-review-e6zw.onrender.com/docs
 2. **User Authentication**:
    - Add OAuth-based authentication for secure access to the API.
 3. **Seperate Celery and FastAPI services**
-   Currently the celery workers and fastapi service are run in a single container together, we can separate the services to have a better and stable architecture
+   - Currently the celery workers and fastapi service are run in a single container together, we can separate the services to have a better and stable architecture
 ---
 
 ## Running Tests
